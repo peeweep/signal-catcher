@@ -13,8 +13,8 @@ func SetupCloseHandler() {
 	signal.Notify(c)
 	go func() {
 		s := <-c
-		fmt.Println(s)
-		fmt.Println("\r- Ctrl+C pressed in Terminal")
+		fmt.Print("signal is: ")
+		fmt.Print(s)
 		os.Exit(0)
 	}()
 }
